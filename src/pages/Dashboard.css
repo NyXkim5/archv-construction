@@ -1,0 +1,291 @@
+.dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stat-card .stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.stat-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stat-change.up {
+  color: var(--accent-success);
+}
+
+.stat-change.down {
+  color: var(--accent-danger);
+}
+
+.stat-card .stat-value {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.link-btn:hover {
+  color: var(--text-primary);
+}
+
+/* Activity Card */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-icon.received {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.activity-icon.approved {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.activity-icon.warning {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.activity-icon.overdue {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.activity-icon.info {
+  background: #e5e5e5;
+  color: #666666;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-action {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Overdue Card */
+.warning-icon {
+  color: var(--accent-warning);
+}
+
+.overdue-count {
+  font-size: 13px;
+  color: var(--accent-danger);
+  font-weight: 500;
+}
+
+.overdue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overdue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #fef2f2;
+  border-radius: var(--radius-md);
+}
+
+.overdue-sub {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.overdue-project {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.overdue-details {
+  text-align: right;
+}
+
+.overdue-days {
+  display: block;
+  font-size: 13px;
+  color: var(--accent-danger);
+  font-weight: 500;
+}
+
+.overdue-amount {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Projects Card */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.project-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.project-progress-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--bg-gray);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-primary);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.project-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.quick-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-gray);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.quick-action:hover {
+  background: var(--accent-primary);
+  color: var(--text-white);
+}
+
+.quick-action span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .dashboard .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
